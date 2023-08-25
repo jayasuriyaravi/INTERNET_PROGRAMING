@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="registration-form " onsubmit="valid()">
+            <span class="head">Registration Form</span>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <span class="error" id="uname"></span>
+
+            <label for="regNo">Roll Number</label>
+            <input type="number" name="regNo" id="RegNo" required>
+            <span id=""></span>
+
+            <fieldset>
+                <legend>Gender</legend>
+                <input type="radio" name="gender" id="gender" value="Male" checked>
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" id="gender" value="Female">
+                <label for="gender">Female</label>
+            </fieldset>
+
+            <label for="dept">Department</label>
+            <select name="dept" id="dept" required>
+                <option value="" selected>Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="IT">IT</option>
+            </select>
+
+            <label for="year">Year</label>
+            <select name="year" id="year" required>
+                <option value="" selected>Select Year</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <label for="sec">Section</label>
+            <input type="text" name="sec" id="sec" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <span class="error" id="mail"></span>
+
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" name="number" placeholder="Enter your Phone Number" required>
+            <span class="error" id="num"></span>
+
+            <label for="country">Country</label>
+            <input type="text" name="country" id="country" required>
+
+            <!-- <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <span class="error" id="pass"></span>
+
+            <label for="con-password">Confirm Password</label>
+            <input type="password" id="con-password" name="con-password" placeholder="Enter your password" required>
+            <span class="error" id="con-pass"></span> -->
+
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" required>
+
+            <label for="pincode">Pincode</label>
+            <input type="text" name="pincode" id="pincode" required>
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address"></textarea>
+            <button type="submit" onclick="valid()">Register</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
