@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>GENERATE THE SECURE PIN</h1>
+    <button onclick="secure()">GENERATE</button>
+    <div class="pin" id="pin"></div>
+</body>
+<script>
+   function secure() {
+        var pin = parseInt(prompt("Enter The pin: "));
+        var arr = [];
+        var len = 3;
+        while (pin != 0) {
+            arr[len] = pin % 10;
+            pin = Math.floor(pin / 10);
+            len--;
+        }
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = (arr[i] + 7) % 10;
+            // alert(arr[i])
+        }
+        var temp = arr[0];
+        arr[0] = arr[2];
+        arr[2] = temp;
+        temp = arr[1];
+        arr[1] = arr[3];
+        arr[3] = temp;
+  
+
+    for (let i = 0; i < arr.length; i++) {
+        document.getElementById("pin").innerHTML += arr[i];
+    }
+}
+
+</script>
+
+</html>
