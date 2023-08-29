@@ -1,30 +1,40 @@
 
 function valid() {
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var con_pass = document.getElementById("con-password").value;
-    var num = document.getElementById("number").value;
-    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var phoneNumber = document.getElementById('number').value;
 
-    // console.log(email);
-    if (username == '') {
-        document.getElementById("uname").innerHTML = "Enter Charaters!!!!!";
+    var usernameRegex = /^[a-zA-Z0-9_]+$/; // Alphanumeric and underscore only
+    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2, 4}$/; // Email format
+    var phoneRegex = /^\d{10}$/; // 10-digit phone number
+
+    // var isValid = true;
+
+    // Validate Username
+    if (!username.match(usernameRegex)) {
+        document.getElementById('uname').textContent = 'Invalid username';
+        // isValid = false;
+    } else {
+        document.getElementById('uname').textContent = '';
     }
-    else if (!isNaN(username) && username.length <= 6) {
-        document.getElementById("uname").innerHTML = "Enter Aleast Six Charater ";
+
+    // Validate Email
+    if (!email.match(emailRegex)) {
+        document.getElementById('mail').textContent = 'Invalid email';
+        // isValid = false;
+    } else {
+        document.getElementById('mail').textContent = '';
     }
-    else if (isNaN(num)) {
-        document.getElementById("num").innerHTML = "Enter Numbers ";
+
+    // Validate Phone Number
+    if (!phoneNumber.match(phoneRegex)) {
+        document.getElementById('num').textContent = 'Invalid phone number';
+        // isValid = false;
+    } else {
+        document.getElementById('num').textContent = '';
     }
-    else if (num.length !== 10) {
-        document.getElementById("num").innerHTML = "Enter Ten Numbers  ";
-    }
-    else if (!passwordPattern.test(password)) {
-        document.getElementById("pass").innerHTML = "Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters";
-        // return false;
-    }
-    else if (password !== con_pass) {
-        document.getElementById("con-pass").innerHTML = "Password doesn't Match";
-    }
+
+    // Additional validation for other fields can be added here.
+
+    // return isValid;
 }
