@@ -19,7 +19,7 @@
 
             <label for="regNo">Roll Number</label>
             <input type="number" name="regNo" id="RegNo" required>
-            <span id=""></span>
+            <span class="error" id="rollno"></span>
 
             <fieldset>
                 <legend>Gender</legend>
@@ -38,6 +38,8 @@
                 <option value="MECH">MECH</option>
                 <option value="IT">IT</option>
             </select>
+            <span class="error" id="dept-error"></span>
+
 
             <label for="year">Year</label>
             <select name="year" id="year" required>
@@ -47,9 +49,11 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
+            <span class="error" id="year-error"></span>
+
 
             <label for="sec">Section</label>
-            <input type="text" name="sec" id="sec" required>
+            <input type="text" name="sec" id="sec" placeholder="Enter your section" required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -60,7 +64,7 @@
             <span class="error" id="num"></span>
 
             <label for="country">Country</label>
-            <input type="text" name="country" id="country" required>
+            <input type="text" name="country" id="country" value="India" required>
 
             <!-- <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
@@ -71,10 +75,12 @@
             <span class="error" id="con-pass"></span> -->
 
             <label for="city">City</label>
-            <input type="text" name="city" id="city" required>
+            <input type="text" name="city" id="city" value="Chennai" required>
 
             <label for="pincode">Pincode</label>
-            <input type="text" name="pincode" id="pincode" required>
+            <input type="text" name="pincode" id="pincode" value="600028" required>
+            <span class="error" id="pin-error"></span>
+
 
             <label for="address">Address</label>
             <textarea name="address" id="address"></textarea>

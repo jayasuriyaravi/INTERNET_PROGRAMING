@@ -3,38 +3,56 @@ function valid() {
     var username = document.getElementById('username').value;
     var email = document.getElementById('email').value;
     var phoneNumber = document.getElementById('number').value;
+    var rollno = document.getElementById('RegNo').value;
+    var department = document.getElementById('dept').value;
+    var year = document.getElementById('year').value;
+    var pincode = document.getElementById('pincode').value;
 
-    var usernameRegex = /^[a-zA-Z0-9_]+$/; // Alphanumeric and underscore only
-    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2, 4}$/; // Email format
-    var phoneRegex = /^\d{10}$/; // 10-digit phone number
+    // var usernameRegex = /^[a-zA-Z0-9_]+$/; 
+    var emailvalid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2, 4}$/; // Email format
+    var phonevalid = /^\d{10}$/;
 
-    // var isValid = true;
 
-    // Validate Username
-    if (!username.match(usernameRegex)) {
-        document.getElementById('uname').textContent = 'Invalid username';
-        // isValid = false;
+    if (username === '' || username === null) {
+        document.getElementById("uname").innerHTML = "Enter Charaters!!!!!";
     } else {
         document.getElementById('uname').textContent = '';
     }
 
-    // Validate Email
-    if (!email.match(emailRegex)) {
-        document.getElementById('mail').textContent = 'Invalid email';
-        // isValid = false;
+    if (rollno === '' || rollno === null) {
+        document.getElementById("rollno").innerHTML = "Enter Charaters!!!!!";
     } else {
-        document.getElementById('mail').textContent = '';
+        document.getElementById('rollno').textContent = '';
     }
 
-    // Validate Phone Number
-    if (!phoneNumber.match(phoneRegex)) {
-        document.getElementById('num').textContent = 'Invalid phone number';
-        // isValid = false;
+    if (!email.match(emailvalid)) {
+        document.getElementById('mail').innerHTML = 'Invalid email';
     } else {
-        document.getElementById('num').textContent = '';
+        document.getElementById('mail').innerHTML = '';
     }
 
-    // Additional validation for other fields can be added here.
+    if (!phoneNumber.match(phonevalid)) {
+        document.getElementById('num').innerHTML = 'Invalid phone number';
+    } else {
+        document.getElementById('num').innerHTML = '';
+    }
 
-    // return isValid;
+    if (department === "") {
+        document.getElementById('dept-error').innerHTML = 'Please select a department';
+    } else {
+        document.getElementById('dept-error').innerHTML = '';
+    }
+
+    if (year === "") {
+        document.getElementById('year-error').innerHTML = 'Please select a year';
+    } else {
+        document.getElementById('year-error').innerHTML = '';
+    }
+
+    if (pincode.length !==6 ) {
+        document.getElementById('pin-error').innerHTML = 'Invalid pincode';
+    } else {
+        document.getElementById('pin-error').innerHTML = '';
+    }
+
 }
