@@ -1,0 +1,50 @@
+ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(65, 8, 95);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row2 {
+    display: flex;
+    /* border: 1px solid black; */
+    height: 600px;
+}
+
+.menu {
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(128, 128, 128);
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+    /* border: 1px solid #000000; */
+}
+
+.row1 {
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.header {
+    flex: 1;
+}
+
+img {
+    width: 800px;
+}
+
+li:hover,
+li:active {
+    background-color: #fff;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        /* .header{
+            padding: 20px;
+        } */
+
+        .img {
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            background-image: radial-gradient( rgb(118, 45, 151), rgb(74, 20, 99),rgb(29, 0, 46));
+        }
+        .img p
+        {
+            margin-top: 0px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row1">
+            <div class="header">
+                <!-- <img src="img.png" alt=""> -->
+                <div class="img">
+                    RAJALAKSHMI
+                   <p>Engineering College</p>
+                </div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="menu">
+                <ul>
+                    <p>CSE</p>
+                    <li><a href="#" onclick="showContent('Intro')">Introduction</a></li>
+                    <li><a href="#" onclick="showContent('Opp')">Opportunitics</a></li>
+                    <li><a href="#" onclick="showContent('Fac')">Faculty Members</a></li>
+                    <li><a href="#" onclick="showContent('LabFac')">Lab Faculty</a></li>
+                    <li><a href="#" onclick="showContent('News')">News</a></li>
+                </ul>
+            </div>
+            <div class="content" id="content" style="background-color: #fff;">
+            </div>
+        </div>
+    </div>
+    <script>
+        const Faculty = `
+    <table class=" new">
+                <tr>
+                    <th>COURSE CODE</th>
+                    <th colspan="2">COURSE TITLE</th>
+                    <th>STAFF CODE</th>
+                    <th colspan="2">STAFF TITLE</th>
+                    <th colspan="2">TUTORIAL / LAB<br>/ASSISTANT</th>
+                </tr>
+                <tr>
+                    <td>CS19501</td>
+                    <td colspan="2">Theory of Computation</td>
+                    <td>CS09 / CS224</td>
+                    <td colspan="2">Dr.S.Poonkuzhali</td>
+                    <td colspan="2">Dr.Vijayalakshmi</td>
+                </tr>
+                <tr>
+                    <td>CS19P06</td>
+                    <td colspan="2">Human Computer Interaction</td>
+                    <td>CS240</td>
+                    <td colspan="2">Mrs.M.Keerthika</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>OAI1903</td>
+                    <td colspan="2">Introduction to Robotics Process <br> Automation</td>
+                    <td>CS208</td>
+                    <td colspan="2">Dr.N.DuraiMurugan</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>CS19541</td>
+                    <td colspan="2">Computer Networks</td>
+                    <td>CS239</td>
+                    <td colspan="2">Dr.N.Srinivasan</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>CS19542</td>
+                    <td colspan="2">Internet Programming</td>
+                    <td>CS178</td>
+                    <td colspan="2">Mrs.R.Akiladevi</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>AI19341</td>
+                    <td colspan="2">Principles of Artificial Intelligence</td>
+                    <td>CS110</td>
+                    <td colspan="2">Mrs.Susmitha Mishra</td>
+                    <td colspan="2"></td>
+                </tr>
+                </table>
+                `;
+        const intro = `  <p>Rajalakshmi Engineering College, an autonomous institution affiliated to Anna University,
+            Chennai, was established in the year 1997 under the aegis of Rajalakshmi Educational Trust whose members
+            have had consummate experience in the fields of education and industry.
+            The College has grown from strength to strength in the last 25 years
+            and progressing towards Excellence in Engineering Education, Research and Development.</p>
+        <p>Started with 3 Under Graduate programmes in Engineering with an annual intake of 180 students in 1997,
+            the College presently offers 18 Under Graduate and 9 Post Graduate programmes including MBA program,
+            with an annual intake of 2070 students. The approval of AICTE and affiliation of the Anna University
+            for such a progressive intake is a standing testimony for the continuous growth of the college over the
+            years.
+            9 of our departments are recognized as Research Centers of Anna University to conduct Ph.D. and M.S. (By
+            Research)
+            programmes and many scholars have obtained Ph.D. through these research centres.
+        </p>`;
+        const news = `  <h1>Vision</h1>
+        <p>To be an institution of excellence in Engineering, Technology and Management Education & Research. To provide
+            competent
+            and ethical professionals with a concern for society.</p>
+
+        <h1>Mission</h1>
+        <p>To impart quality technical education imbibed with proficiency and humane values.</p>
+        <p>To provide right ambience and opportunities for the students to develop into creative, talented and globally
+            competent
+            professionals.</p>
+        To provide right ambience and opportunities for the students to develop into creative, talented and globally
+        competent
+        professionals.
+        <p>To promote research and development in technology and management for the benefit of the society.
+
+        </p>`; 
+    </script>
+    <script>
+        function showContent(page) {
+            var contentDiv = document.getElementById('content');
+            if (page == 'Opp') {
+                contentDiv.innerHTML = "<p>Since its inception in 1997, the Department of Computer Science and Engineering has been continuously making progress in teaching and R & D activities. Initially commencing with an intake of 60 students, the sanctioned intake was increased to 90 seats in 2001 and to 120 seats in 2005 and to 300 seats in 2015. The Post Graduate programme viz. M.E. - Computer Science and Engineering was introduced in the year 2004-05 and in 2006 the Department was recognized as Collaborative Research Centre by Anna University to offer M.S. (by research) and Ph.D. programmes. The Department has been maintaining an active interaction with the industries particularly with the Computer Society of India. The IT major Tata Consultancy Services has accredited the college for faculty and students development programmes, campus interview etc.The Department has entered into an MoU with IBM, Infosys, TCS, Zoho, Virtusa, Pega, Oracle, Wipro, VMWare, UiPath, Dell, Cognizant, AWS, U.S.Technologies and many other renowned software companies for software training and Faculty Development Programmes, besides R & D activities.The students from the Department have brought laurels by winning AICTE Smart India Hackathon three times.CII Connect awards have been presented by honourable Chief Minister of Tamilnadu to the students.The students have participated in several Hackathons and competitions and won accolades for the Department and college.Many of the students are well placed in leading software companies such as TCS, Infosys, Zoho, IBM, etc., There are quite a number of students who have taken up the ladder of Entrepreneurship.</p>"
+            }
+            else if (page == 'Intro') {
+                contentDiv.innerHTML = intro;
+
+            }
+            else if (page == 'Fac') {
+                contentDiv.innerHTML = Faculty;
+            }
+            else if (page == 'LabFac') {
+                contentDiv.innerHTML = Faculty;
+            }
+            else {
+                contentDiv.innerHTML = news;
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

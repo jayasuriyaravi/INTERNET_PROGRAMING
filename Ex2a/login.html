@@ -5,21 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <title>Registration Form</title>
+    <!-- <style>
+        body {
+
+            font-family: 'Alkatra', cursive;
+            font-family: 'EB Garamond', serif;
+            background-color: rgb(139, 140, 137);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+
+        input:focus {
+            background-color: rgb(163, 206, 241);
+        }
+
+        ::placeholder {
+            color: black;
+        }
+
+        input {
+            /* width: 100%; */
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin-bottom: 2px;
+            background-color: rgb(217, 216, 216);
+        }
+
+        button {
+            background-color: rgb(39, 76, 119);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(22, 43, 68);
+        }
+
+        .head {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 0px;
+            margin-top: 0%;
+            font-weight: bold;
+            /* color: ;px */
+        }
+
+        .error {
+            color: red;
+        }
+    </style> -->
 </head>
 
 <body>
     <div class="container">
-        <form class="registration-form " onsubmit="valid()" action="">
+        <form class="registration-form " onsubmit="valid()">
             <span class="head">Registration Form</span>
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username">
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
             <span class="error" id="uname"></span>
 
             <label for="regNo">Roll Number</label>
             <input type="number" name="regNo" id="RegNo" required>
-            <span class="error" id="rollno"></span>
+            <span id=""></span>
 
             <fieldset>
                 <legend>Gender</legend>
@@ -38,8 +120,6 @@
                 <option value="MECH">MECH</option>
                 <option value="IT">IT</option>
             </select>
-            <span class="error" id="dept-error"></span>
-
 
             <label for="year">Year</label>
             <select name="year" id="year" required>
@@ -49,11 +129,9 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
             </select>
-            <span class="error" id="year-error"></span>
-
 
             <label for="sec">Section</label>
-            <input type="text" name="sec" id="sec" placeholder="Enter your section" required>
+            <input type="text" name="sec" id="sec" required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -64,7 +142,7 @@
             <span class="error" id="num"></span>
 
             <label for="country">Country</label>
-            <input type="text" name="country" id="country" value="India" required>
+            <input type="text" name="country" id="country" required>
 
             <!-- <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
@@ -75,20 +153,19 @@
             <span class="error" id="con-pass"></span> -->
 
             <label for="city">City</label>
-            <input type="text" name="city" id="city" value="Chennai" required>
+            <input type="text" name="city" id="city" required>
 
             <label for="pincode">Pincode</label>
-            <input type="text" name="pincode" id="pincode" value="600028" required>
-            <span class="error" id="pin-error"></span>
-
+            <input type="text" name="pincode" id="pincode" required>
 
             <label for="address">Address</label>
             <textarea name="address" id="address"></textarea>
-            <input type="submit" class="button" onclick="valid()">Register</button>
+            <button type="submit" onclick="valid()">Register</button>
         </form>
     </div>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 
