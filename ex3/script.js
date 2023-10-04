@@ -15,7 +15,8 @@ function valid() {
 
     if (username === '' || username === null) {
         document.getElementById("uname").innerHTML = "Enter Charaters!!!!!";
-    } else {
+    }
+    else {
         document.getElementById('uname').textContent = '';
     }
 
@@ -49,7 +50,7 @@ function valid() {
         document.getElementById('year-error').innerHTML = '';
     }
 
-    if (pincode.length !==6 ) {
+    if (pincode.length !== 6) {
         document.getElementById('pin-error').innerHTML = 'Invalid pincode';
     } else {
         document.getElementById('pin-error').innerHTML = '';
